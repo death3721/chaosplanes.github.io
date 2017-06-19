@@ -101,8 +101,8 @@
   </time>
   <section class="content">
 	  <p>在公司闲来无事, 于是想把之前在GitHub上的博客完善一下. 之前只会使用GitHubPage配合Markdown制作单页面说明.</p>
-<p>本文参考了<20分钟教你使用hexo搭建github博客>这篇文章 原文地址 <a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">http://www.jianshu.com/p/e99ed60390a8</a></20分钟教你使用hexo搭建github博客></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function gistTag(args, content) &#123;</div><div class="line">  var id = args.shift();</div><div class="line">  var file = args.length ? &apos;?file=&apos; + args[0] : &apos;&apos;;</div><div class="line">  return &apos;&lt;script src=&quot;//gist.github.com/&apos; + id + &apos;.js&apos; + file + &apos;&quot;&gt;&lt;/script&gt;&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>本文参考了<a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">20分钟教你使用hexo搭建github博客</a>这篇文章 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> gistTag(args, content) &#123;</div><div class="line">  var id = args.shift();</div><div class="line">  var file = args.length ? <span class="string">'?file='</span> + args[0] : <span class="string">''</span>;</div><div class="line">  <span class="built_in">return</span> <span class="string">'&lt;script src="//gist.github.com/'</span> + id + <span class="string">'.js'</span> + file + <span class="string">'"&gt;&lt;/script&gt;'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 
     

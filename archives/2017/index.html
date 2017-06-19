@@ -105,9 +105,13 @@
     6月 19, 2017
   </time>
   <section class="content">
-	  <p>在公司闲来无事, 于是想把之前在GitHub上的博客完善一下. 之前只会使用GitHubPage配合Markdown制作单页面说明.</p>
-<p>本文参考了<a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">20分钟教你使用hexo搭建github博客</a>这篇文章 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> gistTag(args, content) &#123;</div><div class="line">  var id = args.shift();</div><div class="line">  var file = args.length ? <span class="string">'?file='</span> + args[0] : <span class="string">''</span>;</div><div class="line">  <span class="built_in">return</span> <span class="string">'&lt;script src="//gist.github.com/'</span> + id + <span class="string">'.js'</span> + file + <span class="string">'"&gt;&lt;/script&gt;'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+	  <h3 id="本文之前的碎碎念"><a href="#本文之前的碎碎念" class="headerlink" title="本文之前的碎碎念"></a>本文之前的碎碎念</h3><p>早在2006年, 我就开始写博客, 那时候高中刚毕业, 在等大学通知书的时候上网知道了博客这个新事物.</p>
+<p>最早是在blogbus上写博客. 一直到了08年, 服务器越来越不稳定, 经常访问不了, 于是把以前写的博文都转移到了新浪博客. (话说新浪真的陪了我好多年, 从用电话线上网的时候就开始用新浪的邮箱, 直到现在那个邮箱也是我常用的, 还有天天刷的微博, 虽然满眼都是广告, 但也吊打微信公众号10086倍.)</p>
+<p>09年工作以后, 也没了写东西的热情, 偶尔写过几个游戏攻略. 新浪博客的博主我就知道俩, 一个是追随了多年的主席<a href="http://blog.sina.com.cn/sunx1983" target="_blank" rel="external">@孙渣</a>, 一个是专门写烘焙博的<a href="http://blog.sina.com.cn/u/1246792191" target="_blank" rel="external">@君之</a>. 后来博客慢慢没了热度, 微博取而代之, 的确, 微博比较适合现在娱乐至上的节奏.</p>
+<p>在学习iOS开发期间, 开始在博客园写技术博, 记录学习的点滴, 这个过程是我目前唯一觉得有趣的乐趣. 虽然论记录功能, 还是印象笔记比较好用, 单有些技术上的东西, 还是分享出来比较好, 也能更好的帮助刚入坑的人. 博客园上传代码界面太难看, 颜色实在受不了, 而且我对CSDN没啥好印象, 完全不想去那开博, 所以还是自己搭博客, 不仅仅是写技术方面的事. 也会写一些生活技能相关的东西, 也会把之前人人小站 <a href="http://zhan.renren.com/chaosplanes" target="_blank" rel="external">@混乱位面视觉工作室</a> 上的东西转移过来.</p>
+<p>今天在公司闲来无事, 于是想把之前在GitHub上的博客完善一下, 顺便学学新技术.</p>
+<p>本文参考了 <a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">&lt;<20分钟教你使用hexo搭建github博客>&gt;</20分钟教你使用hexo搭建github博客></a> 这篇文章.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">- (IBAction)loginBtnClick:(UIButton *)sender &#123;</div><div class="line">    <span class="keyword">if</span> ([_accountText.text isEqualToString:@<span class="string">""</span>] || [_passwordText.text isEqualToString:@<span class="string">""</span>]) &#123;</div><div class="line">        Exile_ALERT(@<span class="string">"温馨提示"</span>, @<span class="string">"请输入账号和密码"</span>)</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">        [UD setObject:_accountText.text forKey:@<span class="string">"ACCOUNT"</span>];</div><div class="line">        [self netRequest];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 
     

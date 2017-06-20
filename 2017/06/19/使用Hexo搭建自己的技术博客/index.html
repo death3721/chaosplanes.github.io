@@ -101,7 +101,7 @@
 <meta property="og:description" content="本文之前的碎碎念早在2006年, 我就开始写博客, 那时候高中刚毕业, 在等大学通知书的时候上网知道了博客这个新事物. 最早是在blogbus上写博客. 一直到了08年, 服务器越来越不稳定, 经常访问不了, 于是把以前写的博文都转移到了新浪博客. (话说新浪真的陪了我好多年, 从用电话线上网的时候就开始用新浪的邮箱, 直到现在那个邮箱也是我常用的, 还有天天刷的微博, 虽然满眼都是广告, 但也吊">
 <meta property="og:image" content="http://orml0ln44.bkt.clouddn.com/hexo_01.png">
 <meta property="og:image" content="http://orml0ln44.bkt.clouddn.com/hexo_02.png">
-<meta property="og:updated_time" content="2017-06-20T07:13:19.000Z">
+<meta property="og:updated_time" content="2017-06-20T08:34:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo搭建自己的技术博客">
 <meta name="twitter:description" content="本文之前的碎碎念早在2006年, 我就开始写博客, 那时候高中刚毕业, 在等大学通知书的时候上网知道了博客这个新事物. 最早是在blogbus上写博客. 一直到了08年, 服务器越来越不稳定, 经常访问不了, 于是把以前写的博文都转移到了新浪博客. (话说新浪真的陪了我好多年, 从用电话线上网的时候就开始用新浪的邮箱, 直到现在那个邮箱也是我常用的, 还有天天刷的微博, 虽然满眼都是广告, 但也吊">
@@ -205,7 +205,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Accueil
+            Startseite
           </a>
         </li>
       
@@ -215,7 +215,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -285,7 +285,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-19T14:38:07+08:00">
                 2017-06-19
@@ -352,7 +352,10 @@
 <p>其它选项默认即可.</p>
 <h4 id="部署配置"><a href="#部署配置" class="headerlink" title="部署配置"></a>部署配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: 仓库地址</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 <p>repo和branch需要自己手动补全, 仓库地址在GitHub相应的仓库页面 <code>Clone or download</code> 选项下直接复制, branch填master. 以上整个博客系统基本搭建完成, 以下开始讲解具体使用部分.</p>
-<h3 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h3>
+<h3 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h3><p>命令行输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 创建一篇新文章</div><div class="line">$ hexo new &quot;新文章标题&quot;</div></pre></td></tr></table></figure></p>
+<p>执行后会在 <code>本地博客根目录/source/_post</code> 生成相应的md文件.<br>使用文本编辑器打开编辑内容, 推荐使用atom.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: 文章标题</div><div class="line">date: 生成时间</div><div class="line">tags: tag标签</div><div class="line">---</div><div class="line">文章正文</div></pre></td></tr></table></figure></p>
+<p>编辑完进行保存.</p>
+
       
     </div>
 
@@ -445,10 +448,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table Des Matières
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Ensemble
+            Übersicht
           </li>
         </ul>
       
@@ -469,7 +472,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">articles</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -539,11 +542,11 @@
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Thème -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>

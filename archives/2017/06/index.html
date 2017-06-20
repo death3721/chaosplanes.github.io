@@ -113,7 +113,7 @@
 <p>本文参考了 <a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">&lt;<20分钟教你使用hexo搭建github博客>&gt;</20分钟教你使用hexo搭建github博客></a> 这篇文章. 个人使用MacBook Air, 所以使用Mac系统作为讲解.</p>
 <h3 id="1-注册GitHub账号"><a href="#1-注册GitHub账号" class="headerlink" title="1. 注册GitHub账号"></a>1. 注册GitHub账号</h3><p>由于Hexo是基于GitHub仓库运行的, 所以需要注册GitHub账号. 具体过程以及GitHub是做什么的就不再不再敖述.</p>
 <h3 id="2-创建个人博客仓库"><a href="#2-创建个人博客仓库" class="headerlink" title="2. 创建个人博客仓库"></a>2. 创建个人博客仓库</h3><p>GitHub本身可以创建个人博客, 但是创建整个博客系统相对于技术不全面的入门级工程师以及文字工作者过于困难. 博客仓库是一个特殊的项目仓库.</p>
-<p><img src="http://orml0ln44.bkt.clouddn.com/hexo_01.jpeg" alt="Image"></p>
+<p><img src="http://orml0ln44.bkt.clouddn.com/hexo_01.png" alt="Image"></p>
 <p>在仓库名字(Repository name)中写入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">github昵称.github.io</div></pre></td></tr></table></figure></p>
 <p>如我的仓库名字就是death3721.github.io<br>这就是博客仓库的特殊性. 然后点击 <code>Create repository</code> 生成仓库.</p>
 <h3 id="3-生成密钥"><a href="#3-生成密钥" class="headerlink" title="3. 生成密钥"></a>3. 生成密钥</h3><p>很多教程都有这个过程, 但是我实际操作时候并没有遇到这一步. 这个密钥的作用是保证上传者请求的安全性. 因为我的GitHub账号很久之前就注册了, 安装登录GitHub Desktop以后就会绑定本机. 在这一步遇到问题可以在百度搜一下, 很容易解决.</p>
@@ -123,7 +123,10 @@
 <p>命令行安装指令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
 <p>安装完成后, 在命令行输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo</div></pre></td></tr></table></figure></p>
 <p>如出现hexo相关指令说明, 则安装成功.</p>
-<h3 id="7-初始化博客"><a href="#7-初始化博客" class="headerlink" title="7. 初始化博客"></a>7. 初始化博客</h3>
+<h3 id="7-初始化博客"><a href="#7-初始化博客" class="headerlink" title="7. 初始化博客"></a>7. 初始化博客</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 建立一个本地博客文件夹并初始化博客, &lt;folder&gt;为文件夹的名称, 之后博客文件都存放在这里.</div><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">// 进入刚建立的博客文件夹, &lt;folder&gt;为文件夹的名称, 默认路径是/Users/用户名/.</div><div class="line">$ cd &lt;folder&gt;</div><div class="line">// node.js的命令, 根据博客既定的配置文件安装所有的依赖包.</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>完成后的文件夹是这样的:</p>
+<p><img src="http://orml0ln44.bkt.clouddn.com/hexo_02.png" alt="Image"></p>
+<h3 id="8-配置博客"><a href="#8-配置博客" class="headerlink" title="8. 配置博客"></a>8. 配置博客</h3>
 
     
     

@@ -203,7 +203,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -213,7 +213,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -285,7 +285,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-19T14:38:07+08:00">
                 2017-06-19
@@ -340,7 +340,7 @@
 <h3 id="安装git工具"><a href="#安装git工具" class="headerlink" title="安装git工具"></a>安装git工具</h3><p>由于Mac系统自带的命令行工具在安装Xcode以后就包含git功能, 所以不需要安装git.<br>如命令行不带git指令, 去<a href="https://git-scm.com/downloads" target="_blank" rel="external">git官网</a>下载安装.</p>
 <h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>Hexo是一个基于GitHub的博客框架, 可以去<a href="https://hexo.io/" target="_blank" rel="external">Hexo官网</a>查看官方文档.</p>
 <p>命令行安装指令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
-<p>安装完成后, 在命令行输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo</div></pre></td></tr></table></figure></p>
+<p>这一步可能遇到安装被墙, 需要把地址改成淘宝镜像, 具体自行搜索即可.<br>安装完成后, 在命令行输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo</div></pre></td></tr></table></figure></p>
 <p>如出现hexo相关指令说明, 则安装成功.</p>
 <h3 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 建立一个本地博客文件夹并初始化博客, &lt;folder&gt;为文件夹的名称, 之后博客文件都存放在这里.</div><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">// 进入刚建立的博客文件夹, &lt;folder&gt;为文件夹的名称, 默认路径是/Users/用户名/.</div><div class="line">$ cd &lt;folder&gt;</div><div class="line">// node.js的命令, 根据博客既定的配置文件安装所有的依赖包.</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
 <p>完成后的文件夹是这样的:</p>
@@ -354,9 +354,16 @@
 <p>其它选项默认即可.</p>
 <h4 id="部署配置"><a href="#部署配置" class="headerlink" title="部署配置"></a>部署配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: 仓库地址</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 <p>repo和branch需要自己手动补全, 仓库地址在GitHub相应的仓库页面 <code>Clone or download</code> 选项下直接复制, branch填master. 以上整个博客系统基本搭建完成, 以下开始讲解具体使用部分.</p>
-<h3 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h3><p>命令行输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 创建一篇新文章</div><div class="line">$ hexo new &quot;新文章标题&quot;</div></pre></td></tr></table></figure></p>
-<p>执行后会在 <code>本地博客根目录/source/_post</code> 生成相应的md文件.<br>使用文本编辑器打开编辑内容, 推荐使用atom.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: 文章标题</div><div class="line">date: 生成时间</div><div class="line">tags: tag标签</div><div class="line">---</div><div class="line">文章正文</div></pre></td></tr></table></figure></p>
+<h3 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h3><h4 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h4><p>命令行输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 创建一篇新文章</div><div class="line">$ hexo new &quot;新文章标题&quot;</div></pre></td></tr></table></figure></p>
+<p>执行后会在 <code>本地博客根目录/source/_post</code> 生成相应的md文件.<br>使用文本编辑器打开编辑内容, 推荐使用atom.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: 修改文章标题</div><div class="line">date: 修改生成时间</div><div class="line">tags: 修改tag标签</div><div class="line">---</div><div class="line">文章正文</div></pre></td></tr></table></figure></p>
 <p>编辑完进行保存.</p>
+<h4 id="本地发布"><a href="#本地发布" class="headerlink" title="本地发布"></a>本地发布</h4><p>命令行输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure></p>
+<p>会得到本地的地址, 例如<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>把该地址输入浏览器即可预览刚刚生成的博客页面. 不是每次创建新文件都必须在命令行中执行, 手动添加md文件也可.</p>
+<h4 id="网络发布"><a href="#网络发布" class="headerlink" title="网络发布"></a>网络发布</h4><p>本地发布的文件只有自己能看到. 必须通过网络发布, 把本地博客文件与GitHub仓库同步才可以从网络访问.</p>
+<p>命令行输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
+<p>该命令会把本地的md文件解析成html文件, 生成相应的页面.<br>执行后输入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>该命令会把本地博客文件与仓库同步, 发布博客. 此时可能出现 <code>Deployer not found: git</code> 错误, 需要命令行执行:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>之后再次执行deploy命令, 访问博客已经可以看到发布的博文了(有可能有几分钟的延迟).</p>
 
           
         
@@ -429,7 +436,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-19T10:43:21+08:00">
                 2017-06-19
@@ -557,7 +564,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">articles</span>
               </a>
             </div>
           
@@ -611,11 +618,11 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Theme -
+  Thème -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>

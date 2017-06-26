@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="混乱位面视觉">
+<meta name="description" content="init1$ hexo init &amp;lt;folder&amp;gt; 建立一个本地博客文件夹并初始化博客, 为文件夹的名称, 之后博客文件都存放在这里. new1$ hexo new &amp;quot;新文章标题&amp;quot; 创建一篇新文章. generate1$ hexo generate 把本地的md文件解析成html文件, 生成相应的页面. 该命令可以简写为:1$ hexo g deploy1$ hex">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo常用命令整理">
 <meta property="og:url" content="http://yoursite.com/2017/06/21/Hexo常用命令整理/index.html">
 <meta property="og:site_name" content="混乱位面视觉">
-<meta property="og:description" content="混乱位面视觉">
-<meta property="og:updated_time" content="2017-06-23T08:06:36.000Z">
+<meta property="og:description" content="init1$ hexo init &amp;lt;folder&amp;gt; 建立一个本地博客文件夹并初始化博客, 为文件夹的名称, 之后博客文件都存放在这里. new1$ hexo new &amp;quot;新文章标题&amp;quot; 创建一篇新文章. generate1$ hexo generate 把本地的md文件解析成html文件, 生成相应的页面. 该命令可以简写为:1$ hexo g deploy1$ hex">
+<meta property="og:updated_time" content="2017-06-26T00:57:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo常用命令整理">
-<meta name="twitter:description" content="混乱位面视觉">
+<meta name="twitter:description" content="init1$ hexo init &amp;lt;folder&amp;gt; 建立一个本地博客文件夹并初始化博客, 为文件夹的名称, 之后博客文件都存放在这里. new1$ hexo new &amp;quot;新文章标题&amp;quot; 创建一篇新文章. generate1$ hexo generate 把本地的md文件解析成html文件, 生成相应的页面. 该命令可以简写为:1$ hexo g deploy1$ hex">
 
 
 
@@ -336,7 +336,20 @@
       
 
       
-        
+        <h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div></pre></td></tr></table></figure>
+<p>建立一个本地博客文件夹并初始化博客, <folder>为文件夹的名称, 之后博客文件都存放在这里.</folder></p>
+<h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;新文章标题&quot;</div></pre></td></tr></table></figure>
+<p>创建一篇新文章.</p>
+<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>把本地的md文件解析成html文件, 生成相应的页面.</p>
+<p>该命令可以简写为:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure></p>
+<h3 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>把本地博客文件与仓库同步, 发布博客.<br>该命令可以简写为:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
+<h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div></pre></td></tr></table></figure>
+<p>清除缓存, 常用于更换主题后或页面出现错误.</p>
+<h3 id="组合命令"><a href="#组合命令" class="headerlink" title="组合命令"></a>组合命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g -d</div></pre></td></tr></table></figure>
+<p>generate命令可以自带参数, 该命令执行后会直接发布, 省去了deploy的步骤.</p>
+
       
     </div>
 
@@ -409,6 +422,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/06/25/Markdown常用语法/" rel="prev" title="Markdown常用语法">
+                Markdown常用语法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -456,8 +473,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://orml0ln44.bkt.clouddn.com/turandaren.png"
@@ -472,7 +498,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -485,7 +511,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -510,6 +536,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#init"><span class="nav-number">1.</span> <span class="nav-text">init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#new"><span class="nav-number">2.</span> <span class="nav-text">new</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generate"><span class="nav-number">3.</span> <span class="nav-text">generate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deploy"><span class="nav-number">4.</span> <span class="nav-text">deploy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clean"><span class="nav-number">5.</span> <span class="nav-text">clean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合命令"><span class="nav-number">6.</span> <span class="nav-text">组合命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

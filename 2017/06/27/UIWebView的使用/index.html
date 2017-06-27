@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="init1$ hexo init &amp;lt;folder&amp;gt; 建立一个本地博客文件夹并初始化博客, 为文件夹的名称, 之后博客文件都存放在这里.">
-<meta name="keywords" content="Hexo">
+<meta name="description" content="UIWebView的调用分为两种: 1.直接调用URL不进行其他交互,2.使用代理方法监听加载. 直接调用12345//定义属性@property (weak, nonatomic) IBOutlet UIWebView *webView;//调用NSString* url = @&amp;quot;http://www.baidu.com&amp;quot;;    [_webView loadRequest:">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo常用命令整理">
-<meta property="og:url" content="http://yoursite.com/2017/06/21/Hexo常用命令整理/index.html">
+<meta property="og:title" content="UIWebView的使用">
+<meta property="og:url" content="http://yoursite.com/2017/06/27/UIWebView的使用/index.html">
 <meta property="og:site_name" content="混乱位面视觉">
-<meta property="og:description" content="init1$ hexo init &amp;lt;folder&amp;gt; 建立一个本地博客文件夹并初始化博客, 为文件夹的名称, 之后博客文件都存放在这里.">
-<meta property="og:updated_time" content="2017-06-26T01:24:39.000Z">
+<meta property="og:description" content="UIWebView的调用分为两种: 1.直接调用URL不进行其他交互,2.使用代理方法监听加载. 直接调用12345//定义属性@property (weak, nonatomic) IBOutlet UIWebView *webView;//调用NSString* url = @&amp;quot;http://www.baidu.com&amp;quot;;    [_webView loadRequest:">
+<meta property="og:updated_time" content="2017-06-27T03:05:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo常用命令整理">
-<meta name="twitter:description" content="init1$ hexo init &amp;lt;folder&amp;gt; 建立一个本地博客文件夹并初始化博客, 为文件夹的名称, 之后博客文件都存放在这里.">
+<meta name="twitter:title" content="UIWebView的使用">
+<meta name="twitter:description" content="UIWebView的调用分为两种: 1.直接调用URL不进行其他交互,2.使用代理方法监听加载. 直接调用12345//定义属性@property (weak, nonatomic) IBOutlet UIWebView *webView;//调用NSString* url = @&amp;quot;http://www.baidu.com&amp;quot;;    [_webView loadRequest:">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/21/Hexo常用命令整理/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/27/UIWebView的使用/"/>
 
 
 
 
 
-  <title>Hexo常用命令整理 | 混乱位面视觉</title>
+  <title>UIWebView的使用 | 混乱位面视觉</title>
   
 
 
@@ -272,7 +272,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/21/Hexo常用命令整理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/27/UIWebView的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="death3721">
@@ -289,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo常用命令整理</h1>
+          <h1 class="post-title" itemprop="name headline">UIWebView的使用</h1>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-21T10:10:42+08:00">
-                2017-06-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-27T10:49:19+08:00">
+                2017-06-27
               </time>
             
 
@@ -336,20 +336,8 @@
       
 
       
-        <h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div></pre></td></tr></table></figure>
-<p>建立一个本地博客文件夹并初始化博客, <folder>为文件夹的名称, 之后博客文件都存放在这里.</folder></p>
-<a id="more"></a>
-<h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;新文章标题&quot;</div></pre></td></tr></table></figure>
-<p>创建一篇新文章.</p>
-<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>把本地的md文件解析成html文件, 生成相应的页面.</p>
-<p>该命令可以简写为:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure></p>
-<h3 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>把本地博客文件与仓库同步, 发布博客.<br>该命令可以简写为:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
-<h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div></pre></td></tr></table></figure>
-<p>清除缓存, 常用于更换主题后或页面出现错误.</p>
-<h3 id="组合命令"><a href="#组合命令" class="headerlink" title="组合命令"></a>组合命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g -d</div></pre></td></tr></table></figure>
-<p>generate命令可以自带参数, 该命令执行后会直接发布, 省去了deploy的步骤.</p>
+        <p>UIWebView的调用分为两种: 1.直接调用URL不进行其他交互,<br>2.使用代理方法监听加载.</p>
+<h3 id="直接调用"><a href="#直接调用" class="headerlink" title="直接调用"></a>直接调用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//定义属性</div><div class="line">@property (weak, nonatomic) IBOutlet UIWebView *webView;</div><div class="line">//调用</div><div class="line">NSString* url = @&quot;http://www.baidu.com&quot;;</div><div class="line">    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -400,7 +388,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
           
         </div>
       
@@ -413,8 +401,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/19/使用Hexo搭建自己的技术博客/" rel="next" title="使用Hexo搭建自己的技术博客">
-                <i class="fa fa-chevron-left"></i> 使用Hexo搭建自己的技术博客
+              <a href="/2017/06/25/Markdown常用语法/" rel="next" title="Markdown常用语法">
+                <i class="fa fa-chevron-left"></i> Markdown常用语法
               </a>
             
           </div>
@@ -422,10 +410,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/25/Markdown常用语法/" rel="prev" title="Markdown常用语法">
-                Markdown常用语法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -547,7 +531,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#init"><span class="nav-number">1.</span> <span class="nav-text">init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#new"><span class="nav-number">2.</span> <span class="nav-text">new</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generate"><span class="nav-number">3.</span> <span class="nav-text">generate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deploy"><span class="nav-number">4.</span> <span class="nav-text">deploy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clean"><span class="nav-number">5.</span> <span class="nav-text">clean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合命令"><span class="nav-number">6.</span> <span class="nav-text">组合命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接调用"><span class="nav-number">1.</span> <span class="nav-text">直接调用</span></a></li></ol></div>
             
 
           </div>

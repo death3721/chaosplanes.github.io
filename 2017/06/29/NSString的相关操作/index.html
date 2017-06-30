@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="创建一个字符串对象字面量方法1NSString *string = @&amp;quot;Hello&amp;quot;; 通过其它对象转化12int a = 123;NSString *string = [NSString stringWithFormat:@&amp;quot;%d&amp;quot;,a]; 字符串转化成其它格式将数字串转化成int型数据12NSString *string = @&amp;quot;123&amp;quo">
+<meta name="description" content="创建一个字符串对象字面量方法1NSString *string = @&amp;quot;Hello&amp;quot;; 通过其它对象转化12int a = 123;NSString *string = [NSString stringWithFormat:@&amp;quot;%d&amp;quot;,a];  字符串转化成其它格式将数字串转化成int型数据12NSString *string = @&amp;quot;123&amp;qu">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NSString的相关操作">
 <meta property="og:url" content="http://yoursite.com/2017/06/29/NSString的相关操作/index.html">
 <meta property="og:site_name" content="混乱位面视觉">
-<meta property="og:description" content="创建一个字符串对象字面量方法1NSString *string = @&amp;quot;Hello&amp;quot;; 通过其它对象转化12int a = 123;NSString *string = [NSString stringWithFormat:@&amp;quot;%d&amp;quot;,a]; 字符串转化成其它格式将数字串转化成int型数据12NSString *string = @&amp;quot;123&amp;quo">
-<meta property="og:updated_time" content="2017-06-30T03:33:59.000Z">
+<meta property="og:description" content="创建一个字符串对象字面量方法1NSString *string = @&amp;quot;Hello&amp;quot;; 通过其它对象转化12int a = 123;NSString *string = [NSString stringWithFormat:@&amp;quot;%d&amp;quot;,a];  字符串转化成其它格式将数字串转化成int型数据12NSString *string = @&amp;quot;123&amp;qu">
+<meta property="og:updated_time" content="2017-06-30T03:36:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NSString的相关操作">
-<meta name="twitter:description" content="创建一个字符串对象字面量方法1NSString *string = @&amp;quot;Hello&amp;quot;; 通过其它对象转化12int a = 123;NSString *string = [NSString stringWithFormat:@&amp;quot;%d&amp;quot;,a]; 字符串转化成其它格式将数字串转化成int型数据12NSString *string = @&amp;quot;123&amp;quo">
+<meta name="twitter:description" content="创建一个字符串对象字面量方法1NSString *string = @&amp;quot;Hello&amp;quot;; 通过其它对象转化12int a = 123;NSString *string = [NSString stringWithFormat:@&amp;quot;%d&amp;quot;,a];  字符串转化成其它格式将数字串转化成int型数据12NSString *string = @&amp;quot;123&amp;qu">
 
 
 
@@ -338,6 +338,7 @@
       
         <h3 id="创建一个字符串对象"><a href="#创建一个字符串对象" class="headerlink" title="创建一个字符串对象"></a>创建一个字符串对象</h3><h4 id="字面量方法"><a href="#字面量方法" class="headerlink" title="字面量方法"></a>字面量方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">NSString *string = @&quot;Hello&quot;;</div></pre></td></tr></table></figure>
 <h4 id="通过其它对象转化"><a href="#通过其它对象转化" class="headerlink" title="通过其它对象转化"></a>通过其它对象转化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int a = 123;</div><div class="line">NSString *string = [NSString stringWithFormat:@&quot;%d&quot;,a];</div></pre></td></tr></table></figure>
+<hr>
 <h3 id="字符串转化成其它格式"><a href="#字符串转化成其它格式" class="headerlink" title="字符串转化成其它格式"></a>字符串转化成其它格式</h3><h4 id="将数字串转化成int型数据"><a href="#将数字串转化成int型数据" class="headerlink" title="将数字串转化成int型数据"></a>将数字串转化成int型数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">NSString *string = @&quot;123&quot;;</div><div class="line">int a = [string intValue];</div></pre></td></tr></table></figure>
 <h4 id="将数字串转化成float型数据"><a href="#将数字串转化成float型数据" class="headerlink" title="将数字串转化成float型数据"></a>将数字串转化成float型数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">NSString *string = @&quot;1.23&quot;;</div><div class="line">float b = [string floatValue];</div></pre></td></tr></table></figure>
 <h4 id="将数字串转化成double型数据"><a href="#将数字串转化成double型数据" class="headerlink" title="将数字串转化成double型数据"></a>将数字串转化成double型数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">NSString *string = @&quot;1.23&quot;;</div><div class="line">double c = [string doubleValue];</div></pre></td></tr></table></figure>

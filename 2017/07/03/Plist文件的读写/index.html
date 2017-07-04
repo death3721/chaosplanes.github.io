@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/03/Plist文件的读写/index.html">
 <meta property="og:site_name" content="混乱位面视觉">
 <meta property="og:description" content="在iOS开发中, 经常能遇到plist文件, 比如新建工程里自带一个info.plist文件. plist文件全称是Property List, 属性列表. plist文件在系统中常用于存储用户设置等信息, 其本质是xml标签语言, 使用外部编译器打开即可看到xml格式源码. 创建plist文件和创建普通的类文件一样, 在需要创建文件的目录右键创建新文件. 在Resource分类下, 点击Prop">
-<meta property="og:updated_time" content="2017-07-04T02:43:41.000Z">
+<meta property="og:updated_time" content="2017-07-04T02:54:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Plist文件的读写">
 <meta name="twitter:description" content="在iOS开发中, 经常能遇到plist文件, 比如新建工程里自带一个info.plist文件. plist文件全称是Property List, 属性列表. plist文件在系统中常用于存储用户设置等信息, 其本质是xml标签语言, 使用外部编译器打开即可看到xml格式源码. 创建plist文件和创建普通的类文件一样, 在需要创建文件的目录右键创建新文件. 在Resource分类下, 点击Prop">
@@ -338,6 +338,7 @@
       
         <p>在iOS开发中, 经常能遇到plist文件, 比如新建工程里自带一个info.plist文件. plist文件全称是Property List, 属性列表. plist文件在系统中常用于存储用户设置等信息, 其本质是xml标签语言, 使用外部编译器打开即可看到xml格式源码.</p>
 <h3 id="创建plist文件"><a href="#创建plist文件" class="headerlink" title="创建plist文件"></a>创建plist文件</h3><p>和创建普通的类文件一样, 在需要创建文件的目录右键创建新文件. 在Resource分类下, 点击Property List. 创建属性列表后, 即可在Xcode中直接增删改内容. 本文创建了一个test.plist文件.</p>
+<a id="more"></a>
 <h3 id="调用plist文件"><a href="#调用plist文件" class="headerlink" title="调用plist文件"></a>调用plist文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">NSString *path = [[NSBundle mainBundle] pathForResource:@&quot;test&quot; ofType:@&quot;plist&quot;];</div><div class="line">NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile:path];</div><div class="line">NSLog(@&quot;%@&quot;, data);</div></pre></td></tr></table></figure>
 <p>因为系统的plist文件是属于bundle类的文件, 所以可以全局调用, 只能读, 不能写入. 如想写入只能在沙盒中操作虚拟文件.</p>
 <h3 id="写入plist文件"><a href="#写入plist文件" class="headerlink" title="写入plist文件"></a>写入plist文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// 创建一个数据数组</div><div class="line">NSArray* data = @[@&quot;test&quot;];</div><div class="line">// 获取沙盒Documents目录</div><div class="line">NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];</div><div class="line">// 添加文件名</div><div class="line">NSString *filename = [docPath stringByAppendingPathComponent:@&quot;test.plist&quot;];</div><div class="line">// 写入文件</div><div class="line">[data writeToFile:filename atomically:YES];</div><div class="line">// 读取数据</div><div class="line">NSMutableDictionary *data1 = [[NSMutableDictionary alloc] initWithContentsOfFile:filename];</div><div class="line">NSLog(@&quot;%@&quot;, data1);</div></pre></td></tr></table></figure>

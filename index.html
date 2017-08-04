@@ -339,17 +339,16 @@
 
       
         
-          
-            <h3 id="assign"><a href="#assign" class="headerlink" title="assign"></a>assign</h3><p>简单赋值, 不更改引用计数 (Reference Counting) . 用于修饰基础类型数据 (NSInteger, CGFloat) 和C数据类型 (int, float, double, char等) .</p>
+          <h3 id="assign"><a href="#assign" class="headerlink" title="assign"></a>assign</h3><p>简单赋值, 不更改引用计数 (Reference Counting) . 用于修饰基础类型数据 (NSInteger, CGFloat) 和C数据类型 (int, float, double, char等) .</p>
 <h3 id="retain"><a href="#retain" class="headerlink" title="retain"></a>retain</h3><p>释放旧的对象, 将旧对象的值赋予输入对象, 再提高输入对象的引用计数为1. 修饰NSObject和其子类. Xcode4.3以后弃用.</p>
 <h3 id="copy"><a href="#copy" class="headerlink" title="copy"></a>copy</h3><p>建立一个引用计数为1的对象, 然后释放旧对象. 修饰NSString类型.</p>
-<h3 id="nonatomic"><a href="#nonatomic" class="headerlink" title="nonatomic"></a>nonatomic</h3><p>atomic是OC使用的一种线程保护技术. 基本上来讲, 是防止在写入未完成的时候被另外一个线程读取, 造成数据错误. 而这种机制是耗费系统资源的, 所以在iPhone这种小型设备上, 如果没有使用多线程间的通讯编程, 那么nonatomic是一个非常好的选择.</p>
-<h3 id="weak和strong的区别"><a href="#weak和strong的区别" class="headerlink" title="weak和strong的区别"></a>weak和strong的区别</h3><p>strong和retain同义, weak和assign同义. weak和strong不同的是, 当一个对象不再有strong类型的指针指向它的时候, 即使还有weak型指针指向它, 它也会被释放, 同时所有的weak型指针都将会被清除.</p>
-<h3 id="weak和assign的区别"><a href="#weak和assign的区别" class="headerlink" title="weak和assign的区别"></a>weak和assign的区别</h3><h4 id="修饰变量类型不同"><a href="#修饰变量类型不同" class="headerlink" title="修饰变量类型不同"></a>修饰变量类型不同</h4><p>weak只可以修饰对象. 如果修饰基本数据类型, 编译器会报错-“Property with ‘weak’ attribute must be of object type”.<br>assign可修饰对象和基本数据类型. 当需要修饰对象类型时, MRC时代使用unsafe_unretained. 当然, unsafe<em>unretained也可能产生野指针, 所以它名字是 “unsafe</em>“ .</p>
-<h4 id="是否产生野指针"><a href="#是否产生野指针" class="headerlink" title="是否产生野指针"></a>是否产生野指针</h4><p>weak不会产生野指针问题. 因为weak修饰的对象释放后 (引用计数器值为0) , 指针会自动被置nil, 之后再向该对象发消息也不会崩溃. 所以weak是安全的.<br>assign如果修饰对象, 会产生野指针问题. 如果修饰基本数据类型则是安全的. 修饰的对象释放后, 指针不会自动被置空, 此时向对象发消息会崩溃.</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>assign适用于基本数据类型如int, float, struct等值类型, 不适用于引用类型. 因为值类型会被放入栈中, 遵循先进后出原则, 由系统负责管理栈内存. 而引用类型会被放入堆中, 需要我们自己手动管理内存或通过ARC管理.<br>weak适用于delegate和block等引用类型, 不会导致野指针问题, 也不会循环引用, 非常安全.</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/04/iOS修饰符作用与区别/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

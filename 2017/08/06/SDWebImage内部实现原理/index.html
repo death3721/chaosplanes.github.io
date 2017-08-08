@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/06/SDWebImage内部实现原理/index.html">
 <meta property="og:site_name" content="混乱位面视觉">
 <meta property="og:description" content="几个常用方法简介sd_setImageWithURL:12//图片缓存的基本代码[imageView sd_setImageWithURL: imagePath1];">
-<meta property="og:updated_time" content="2017-08-06T16:31:41.000Z">
+<meta property="og:updated_time" content="2017-08-07T12:53:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SDWebImage内部实现原理">
 <meta name="twitter:description" content="几个常用方法简介sd_setImageWithURL:12//图片缓存的基本代码[imageView sd_setImageWithURL: imagePath1];">
@@ -342,7 +342,48 @@
 <h4 id="sd-setImageWithURL-placeholderImage"><a href="#sd-setImageWithURL-placeholderImage" class="headerlink" title="sd_setImageWithURL: placeholderImage:"></a>sd_setImageWithURL: placeholderImage:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//使用默认图片占位 当图片加载完成后再替换</div><div class="line">[imageView sd_setImageWithURL: imagePath1 placeholderImage: [UIImage imageNamed: @&quot;default&quot;]];</div></pre></td></tr></table></figure>
 <h4 id="sd-setImageWithURL-placeholderImage-completed"><a href="#sd-setImageWithURL-placeholderImage-completed" class="headerlink" title="sd_setImageWithURL:  placeholderImage:  completed:"></a>sd_setImageWithURL:  placeholderImage:  completed:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//使用默认图片占位 并在图片加载完成之后触发block中事件</div><div class="line">[imageView sd_setImageWithURL: imagePath1 placeholderImage: [UIImage imageNamed:@&quot;default&quot;] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) &#123;</div><div class="line"></div><div class="line">&#125;];</div></pre></td></tr></table></figure>
 <h4 id="sd-setImageWithURL-placeholderImage-options"><a href="#sd-setImageWithURL-placeholderImage-options" class="headerlink" title="sd_setImageWithURL: placeholderImage: options:"></a>sd_setImageWithURL: placeholderImage: options:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//options 可选项目设置</div><div class="line">[imageView sd_setImageWithURL: imagePath1 placeholderImage: [UIImage imageNamed:@&quot;default&quot;] options:SDWebImageRetryFailed];</div></pre></td></tr></table></figure>
-<p>其他就不一一介绍了, oc是自文档语言, 看方法名就知道干什么的了. 除了带options选项的方法, 其他的方法都是综合存储, 也就是内存缓存和磁盘缓存结合的方式, 如果你只需要内存缓存, 那么在options这里选择SDWebImageCacheMemoryOnly就可以了.</p>
+<h4 id="options的所有选项"><a href="#options的所有选项" class="headerlink" title="options的所有选项"></a>options的所有选项</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">//失败后重试</div><div class="line">SDWebImageRetryFailed = 1 &lt;&lt; 0</div><div class="line"></div><div class="line">//UI交互期间开始下载 会导致延迟下载 比如UIScrollView减速</div><div class="line">SDWebImageLowPriority = 1 &lt;&lt; 1</div><div class="line"></div><div class="line">//只进行内存缓存</div><div class="line">SDWebImageCacheMemoryOnly = 1 &lt;&lt; 2</div><div class="line"></div><div class="line">//显示渐进式下载标志 显示的图像是逐步在下载</div><div class="line">SDWebImageProgressiveDownload = 1 &lt;&lt; 3</div><div class="line"></div><div class="line">//刷新缓存</div><div class="line">SDWebImageRefreshCached = 1 &lt;&lt; 4</div><div class="line"></div><div class="line">//后台下载</div><div class="line">SDWebImageContinueInBackground = 1 &lt;&lt; 5</div><div class="line"></div><div class="line">//NSMutableURLRequest.HTTPShouldHandleCookies = YES;</div><div class="line">SDWebImageHandleCookies = 1 &lt;&lt; 6</div><div class="line"></div><div class="line">//允许使用无效的SSL证书</div><div class="line">SDWebImageAllowInvalidSSLCertificates = 1 &lt;&lt; 7</div><div class="line"></div><div class="line">//优先下载</div><div class="line">SDWebImageHighPriority = 1 &lt;&lt; 8</div><div class="line"></div><div class="line">//延迟占位符</div><div class="line">SDWebImageDelayPlaceholder = 1 &lt;&lt; 9</div><div class="line"></div><div class="line">//改变动画形象</div><div class="line">SDWebImageTransformAnimatedImage = 1 &lt;&lt; 10</div></pre></td></tr></table></figure>
+<p>其他就不一一介绍了, OC是自文档语言, 看方法名就知道干什么的了. 除了带options选项的方法, 其他的方法都是综合存储, 也就是内存缓存和磁盘缓存结合的方式, 如果你只需要内存缓存, 那么在options这里选择SDWebImageCacheMemoryOnly就可以了.</p>
+<h3 id="SDWebImage内部实现过程"><a href="#SDWebImage内部实现过程" class="headerlink" title="SDWebImage内部实现过程"></a>SDWebImage内部实现过程</h3><p>入口 setImageWithURL:placeholderImage:options: 会先把 placeholderImage 显示，然后 SDWebImageManager 根据 URL 开始处理图片。</p>
+<ol>
+<li><p>进入 SDWebImageManager-downloadWithURL:delegate:options:userInfo: , 交给 SDImageCache 从缓存查找图片是否已经下载 queryDiskCacheForKey:delegate:userInfo: .</p>
+</li>
+<li><p>先从内存图片缓存查找是否有图片, 如果内存中已经有图片缓存, SDImageCacheDelegate 回调 imageCache:didFindImage:forKey:userInfo: 到 SDWebImageManager.</p>
+</li>
+<li><p>SDWebImageManagerDelegate 回调 webImageManager:didFinishWithImage: 到 UIImageView+WebCache 等前端展示图片.</p>
+</li>
+<li><p>如果内存缓存中没有, 生成 NSInvocationOperation 添加到队列开始从硬盘查找图片是否已经缓存.</p>
+</li>
+<li><p>根据 URLKey 在硬盘缓存目录下尝试读取图片文件. 这一步是在 NSOperation 进行的操作, 所以回主线程进行结果回调 notifyDelegate: .</p>
+</li>
+<li><p>如果上一操作从硬盘读取到了图片, 将图片添加到内存缓存中（如果空闲内存过小, 会先清空内存缓存) SDImageCacheDelegate 回调 imageCache:didFindImage:forKey:userInfo: . 进而回调展示图片.</p>
+</li>
+<li><p>如果从硬盘缓存目录读取不到图片, 说明所有缓存都不存在该图片, 需要下载图片, 回调 imageCache:didNotFindImageForKey:userInfo: .</p>
+</li>
+<li><p>共享或重新生成一个下载器 SDWebImageDownloader 开始下载图片.</p>
+</li>
+<li><p>图片下载由 NSURLSession 来做, 实现相关 delegate 来判断图片下载中, 下载完成和下载失败.</p>
+</li>
+<li><p>session: didReceiveData: 中利用 ImageIO 做了按图片下载进度加载效果.</p>
+</li>
+<li><p>sessionDidFinishLoading: 数据下载完成后交给 SDWebImageDecoder 做图片解码处理.</p>
+</li>
+<li><p>图片解码处理在一个 NSOperationQueue 完成, 不会拖慢主线程 UI. 如果有需要对下载的图片进行二次处理, 最好也在这里完成, 效率会好很多.</p>
+</li>
+<li><p>在主线程 notifyDelegateOnMainThreadWithInfo: 宣告解码完成, imageDecoder:didFinishDecodingImage:userInfo: 回调给 SDWebImageDownloader.</p>
+</li>
+<li><p>imageDownloader:didFinishWithImage: 回调给 SDWebImageManager 告知图片下载完成.</p>
+</li>
+<li><p>通知所有的 downloadDelegates 下载完成, 回调给需要的地方展示图片.</p>
+</li>
+<li><p>将图片保存到 SDImageCache 中, 内存缓存和硬盘缓存同时保存. 写文件到硬盘也在以单独 NSInvocationOperation 完成, 避免拖慢主线程.</p>
+</li>
+<li><p>SDImageCache 在初始化的时候会注册一些消息通知, 在内存警告或退到后台的时候清理内存图片缓存, 应用结束的时候清理过期图片.</p>
+</li>
+</ol>
+<p>SDWebImage 也提供了 UIButton + WebCache 和 MKAnnotationView+WebCache, 方便使用.</p>
+<p>SDWebImagePrefetcher 可以预先下载图片, 方便后续使用.</p>
+<p>从上面流程可以看出, 当你调用 setImageWithURL: 方法的时候, 他会自动去给你干这么多事, 当你需要在某一具体时刻做事情的时候, 你可以覆盖这些方法. 比如在下载某个图片的过程中要响应一个事件, 就覆盖这个方法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//覆盖方法 这个方法是下载imagePath2的时候响应</div><div class="line">SDWebImageManager *manager = [SDWebImageManager sharedManager];</div><div class="line"></div><div class="line">[manager downloadImageWithURL:imagePath2 options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) &#123;</div><div class="line"></div><div class="line">NSLog(@&quot;显示当前进度&quot;);</div><div class="line"></div><div class="line">&#125; completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) &#123;</div><div class="line"></div><div class="line">NSLog(@&quot;下载完成&quot;);</div><div class="line"></div><div class="line">&#125;];</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -536,7 +577,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#几个常用方法简介"><span class="nav-number">1.</span> <span class="nav-text">几个常用方法简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sd-setImageWithURL"><span class="nav-number">1.1.</span> <span class="nav-text">sd_setImageWithURL:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sd-setImageWithURL-completed"><span class="nav-number">1.2.</span> <span class="nav-text">sd_setImageWithURL:  completed:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sd-setImageWithURL-placeholderImage"><span class="nav-number">1.3.</span> <span class="nav-text">sd_setImageWithURL: placeholderImage:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sd-setImageWithURL-placeholderImage-completed"><span class="nav-number">1.4.</span> <span class="nav-text">sd_setImageWithURL:  placeholderImage:  completed:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sd-setImageWithURL-placeholderImage-options"><span class="nav-number">1.5.</span> <span class="nav-text">sd_setImageWithURL: placeholderImage: options:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#几个常用方法简介"><span class="nav-number">1.</span> <span class="nav-text">几个常用方法简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sd-setImageWithURL"><span class="nav-number">1.1.</span> <span class="nav-text">sd_setImageWithURL:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sd-setImageWithURL-completed"><span class="nav-number">1.2.</span> <span class="nav-text">sd_setImageWithURL:  completed:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sd-setImageWithURL-placeholderImage"><span class="nav-number">1.3.</span> <span class="nav-text">sd_setImageWithURL: placeholderImage:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sd-setImageWithURL-placeholderImage-completed"><span class="nav-number">1.4.</span> <span class="nav-text">sd_setImageWithURL:  placeholderImage:  completed:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sd-setImageWithURL-placeholderImage-options"><span class="nav-number">1.5.</span> <span class="nav-text">sd_setImageWithURL: placeholderImage: options:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#options的所有选项"><span class="nav-number">1.6.</span> <span class="nav-text">options的所有选项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SDWebImage内部实现过程"><span class="nav-number">2.</span> <span class="nav-text">SDWebImage内部实现过程</span></a></li></ol></div>
             
 
           </div>

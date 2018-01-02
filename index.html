@@ -272,6 +272,127 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/02/5分钟学会ASF挂卡/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="death3721">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://orml0ln44.bkt.clouddn.com/hexo_avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="混乱位面视觉">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/02/5分钟学会ASF挂卡/" itemprop="url">5分钟学会ASF挂卡</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-02T15:26:05+08:00">
+                2018-01-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于近期steam社区域名被污染, 导致idle master不能挂卡, 于是转战ASF, 但是论坛置顶的帖子很容易让人望而生畏.<br>本文仅面向想单纯挂卡的玩家.</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="1-更新系统运行库"><a href="#1-更新系统运行库" class="headerlink" title="1.更新系统运行库"></a>1.更新系统运行库</h4><h5 id="win32"><a href="#win32" class="headerlink" title="win32"></a>win32</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">下载并安装 VC++ Redistributable：</div><div class="line">http://go.microsoft.com/fwlink/?LinkID=800028</div><div class="line"></div><div class="line">下载并安装 .NET Core 2.0 SDK：</div><div class="line">https://download.microsoft.com/download/0/F/D/0FD852A4-7EA1-4E2A-983A-0484AC19B92C/dotnet-sdk-2.0.0-win-x86.exe</div></pre></td></tr></table></figure>
+<h5 id="win64"><a href="#win64" class="headerlink" title="win64"></a>win64</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">下载并安装 VC++ Redistributable：</div><div class="line">http://go.microsoft.com/fwlink/?LinkID=800027</div></pre></td></tr></table></figure>
+<h4 id="2-下载最新的ASF"><a href="#2-下载最新的ASF" class="headerlink" title="2.下载最新的ASF:"></a>2.下载最新的ASF:</h4><p>自行选择系统版本, 本文仅以win32/win64为例. 32位系统选择下载Generic版即可.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ASF 官方下载</div><div class="line">https://github.com/JustArchi/ArchiSteamFarm/releases/tag/3.0.5.5</div></pre></td></tr></table></figure></p>
+<h4 id="3-设置配置文件"><a href="#3-设置配置文件" class="headerlink" title="3.设置配置文件"></a>3.设置配置文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ASF V3网页版配置文件</div><div class="line">https://justarchi.github.io/ArchiSteamFarm/#/bot</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name随便填入一个bot名, 这里假设用ASFtest, 之后会用到.</div><div class="line">steam账号的用户名和密码依次填入.</div><div class="line">下方Enabled点选对号.</div><div class="line">IsBotAccount选不选无所谓.</div></pre></td></tr></table></figure>
+<p>设置好后, 点击下方download下载即可.</p>
+<h4 id="4-置入配置文件"><a href="#4-置入配置文件" class="headerlink" title="4.置入配置文件"></a>4.置入配置文件</h4><p>把刚刚下载完的配置文件ASFtest.json放入第一步下载的ASF文件夹根目录下的config文件夹下即可.</p>
+<h4 id="5-创建bat文件"><a href="#5-创建bat文件" class="headerlink" title="5.创建bat文件"></a>5.创建bat文件</h4><p>创建bat文件的目的是方便调用命令行工具, 实现一键挂卡.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">dotnet ASF文件夹路径/ArchiSteamFarm.dll</div><div class="line">pause</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/06/SDWebImage内部实现原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1318,123 +1439,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/25/Markdown常用语法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="death3721">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://orml0ln44.bkt.clouddn.com/hexo_avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="混乱位面视觉">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/25/Markdown常用语法/" itemprop="url">Markdown常用语法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-25T22:16:19+08:00">
-                2017-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># 一级标题</div><div class="line">## 二级标题</div><div class="line">### 三级标题</div></pre></td></tr></table></figure>
-<p>以此类推, 总共六级标题, 注意需要在井号后加入一个空格, 这是标准的Markdown语法.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/25/Markdown常用语法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1484,7 +1488,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1497,7 +1501,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1539,7 +1543,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -346,12 +346,12 @@
 <h5 id="win64"><a href="#win64" class="headerlink" title="win64"></a>win64</h5><p>下载并安装 VC++ Redistributable:<br><a href="http://go.microsoft.com/fwlink/?LinkID=800027" target="_blank" rel="external">下载地址</a></p>
 <h4 id="2-下载最新的ASF"><a href="#2-下载最新的ASF" class="headerlink" title="2.下载最新的ASF:"></a>2.下载最新的ASF:</h4><p>自行选择系统版本, 本文仅以win32/win64为例. 32位系统选择下载Generic版即可.</p>
 <p>ASF官方下载:<br><a href="https://github.com/JustArchi/ArchiSteamFarm/releases/tag/3.0.5.5" target="_blank" rel="external">下载地址</a></p>
-<h4 id="3-设置配置文件"><a href="#3-设置配置文件" class="headerlink" title="3.设置配置文件"></a>3.设置配置文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ASF V3网页版配置文件</div><div class="line">https://justarchi.github.io/ArchiSteamFarm/#/bot</div></pre></td></tr></table></figure>
+<h4 id="3-设置配置文件"><a href="#3-设置配置文件" class="headerlink" title="3.设置配置文件"></a>3.设置配置文件</h4><p>ASF V3网页版配置文件:<br><a href="https://justarchi.github.io/ArchiSteamFarm/#/bot" target="_blank" rel="external">网页地址</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name随便填入一个bot名, 这里假设用ASFtest, 之后会用到.</div><div class="line">steam账号的用户名和密码依次填入.</div><div class="line">下方Enabled点选对号.</div><div class="line">IsBotAccount选不选无所谓.</div></pre></td></tr></table></figure>
 <p>设置好后, 点击下方download下载即可.</p>
 <h4 id="4-置入配置文件"><a href="#4-置入配置文件" class="headerlink" title="4.置入配置文件"></a>4.置入配置文件</h4><p>把刚刚下载完的配置文件ASFtest.json放入第一步下载的ASF文件夹根目录下的config文件夹下即可.</p>
-<h4 id="5-创建bat文件"><a href="#5-创建bat文件" class="headerlink" title="5.创建bat文件"></a>5.创建bat文件</h4><p>创建bat文件的目的是方便调用命令行工具, 实现一键挂卡.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">dotnet ASF文件夹路径/ArchiSteamFarm.dll</div><div class="line">pause</div></pre></td></tr></table></figure>
+<h4 id="5-创建bat文件"><a href="#5-创建bat文件" class="headerlink" title="5.创建bat文件"></a>5.创建bat文件</h4><p>创建bat文件的目的是方便调用命令行工具实现一键开启挂卡, 否则需要每次打开命令行工具.</p>
+<p>创建一个新的文本文档并输入一下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">dotnet ASF文件夹路径/ArchiSteamFarm.dll</div><div class="line">pause</div></pre></td></tr></table></figure></p>
 
           
         
